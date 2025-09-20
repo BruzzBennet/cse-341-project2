@@ -5,11 +5,10 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3001",
+  "host": "https://cse-341-project2-zgec.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
