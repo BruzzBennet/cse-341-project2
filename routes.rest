@@ -1,0 +1,94 @@
+//---------------------------------MONSTERS------------------------------------------
+
+//See all Mons
+GET http://localhost:3000/monsters
+
+###
+//Search Mon by ID
+GET http://localhost:3000/monsters/68cf03a85353259e9da39012
+
+###
+//Create Mon
+POST http://localhost:3000/monsters HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Yetti",
+    "cost_1": "YETY" ,
+    "cost_2": "yei",
+    "type": "Fire",
+    "value_id": "YTTY",
+    "base_stats": "1/2",
+    "equip_stats": "+2/+1",
+    "equip_name": "Yetty blast",
+    "ability_condition": "1 mov",
+    "ability": "defeat a character"
+}
+
+###
+//Update Mon
+PUT http://localhost:3000/monsters/68cf1488609f4dd4138ca323 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Yetty",
+    "cost_1": "" ,
+    "cost_2": "",
+    "type": "Ice",
+    "value_id": "YETY",
+    "base_stats": "0/3",
+    "equip_stats": "+3/+0",
+    "equip_name": "",
+    "ability_condition": "",
+    "ability": ""
+}
+
+###
+//Delete Mon
+DELETE http://localhost:3000/monsters/68cf1488609f4dd4138ca323
+
+//---------------------------------EQUIPMENT------------------------------------------
+
+###
+//See all Equipments
+GET http://localhost:3000/equipment
+
+###
+//Search Equipment by ID
+GET http://localhost:3000/equipment/68cf04ae5353259e9da39014
+
+###
+//Create Equipment
+POST http://localhost:3000/equipment HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Yetty",
+    "cost_1": "lol" ,
+    "cost_2": "haha",
+    "type": "Water",
+    "value_id": "YETY",
+    "equip_stats": "+3/+0",
+    "ability_condition": "end",
+    "ability": "defeat a character"
+}
+
+###
+//Update Equipment
+PUT http://localhost:3000/equipment/68cf178b609f4dd4138ca325 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Yetty Claw",
+    "cost_1": "YETY" ,
+    "cost_2": "GTLT",
+    "type": "Ice",
+    "value_id": "GTLT",
+    "equip_stats": "+2/+2",
+    "ability_condition": "",
+    "ability": ""
+}
+
+###
+//Delete Equipment
+DELETE http://localhost:3000/equipment/68cf178b609f4dd4138ca325
