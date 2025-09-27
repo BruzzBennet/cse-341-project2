@@ -3,14 +3,16 @@ const router = express.Router();
 
 const monController = require("../controllers/monsters");
 
+const {isAuthenticated} = require("../middleware/authenticate");
+
 router.get("/", monController.getAll);
 
-router.get("/:id", monController.getSingle);
+router.get("/:id", isAuthenticated, monController.getSingle);
 
-router.post("/", monController.createUser);
+router.post("/", isAuthenticated, monController.createUser);
 
-router.put("/:id", monController.updateUser);
+router.put("/:id", isAuthenticated, monController.updateUser);
 
-router.delete("/:id", monController.deleteUser);
+router.delete("/:id", isAuthenticated, monController.deleteUser);
 
 module.exports = router;
